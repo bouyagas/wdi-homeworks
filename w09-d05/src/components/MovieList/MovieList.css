@@ -1,0 +1,6 @@
+.movie-list-container {
+  border: 1px solid lightgray;
+  height: 90%;
+  width: 40%;
+  overflow: scroll;
+}

@@ -1,0 +1,55 @@
+/*html {
+  background: url("http://wallpapercave.com/wp/2M0Jkdu.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 0;
+  height: 100%;
+  width: 100%
+}*/
+
+body {
+  background-image: url("http://wallpapercave.com/wp/2M0Jkdu.jpg");
+/*  width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  position: fixed;*/
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Homemade Apple', cursive;
+  color: white;
+  font-size: 60px;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: 'Marvel', sans-serif;
+  color: white;
+  font-size: 50px;
+  margin: 0;
+}
+
+/*#tracks {
+  background-color: #ffff80;
+}
+*/

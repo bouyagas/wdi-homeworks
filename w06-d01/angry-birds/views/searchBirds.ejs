@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Search for Birds</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="bg">
+    <img src="/images/background.png" alt="">
+  </div>
+  <header>
+    <h1>Search for Birds</h1>
+    <a href="/">Home</a>
+    <a href="/angry-birds">Back to all the birds</a>
+  </header>
+  <div class="container">
+  <% birds.forEach( bird => { %>
+    <div class="all-birds">
+      <h2><%= bird.name %></h2>
+      <p><span>Abilities:</span> <%= bird.abilities %></p>
+      <p><span>Group:</span> <%= bird.group %></p>
+      <p><span>Feels:</span> <%= bird.feels %></p>
+      <img src="<%= bird.image %>" alt="<% bird.name %>">
+    </div>
+  <% }) %>
+  </div>
+</body>
+</html>

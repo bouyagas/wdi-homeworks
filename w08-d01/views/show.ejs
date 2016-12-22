@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/shows.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+  <header>
+    <h1>Jason Seminara Realty</h1>
+    <a href="/">Back to search</a>
+  </header>
+  <div id="list-container">
+    <% if (building !== null) { %>
+      <div class="info-div">
+        <h2><%= building.name %></h2>
+        <p>Address: <%= building.address %></p>
+        <p>Number of Floors: <%= building.num_floors %></p>
+      </div>
+    <% } %>
+
+    <% if (apartment !== null) { %>
+      <div class="info-div">
+        <h2>Apartment <%= apartment.name %></h2>
+        <p>Bedrooms: <%= apartment.bedrooms %> | Bathrooms: <%= apartment.bathrooms %></p>
+        <p>Sqft: <%= apartment.sqft %> | <span>Price: <%= apartment.price %></span></p>
+        <button id="delete-item">Delete</button>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

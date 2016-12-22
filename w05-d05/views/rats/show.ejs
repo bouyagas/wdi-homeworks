@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rats to Restaurants</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+  <div class='bg graybg'></div>
+  <div class='header-bar'>
+    <div class='header-1'></div>
+    <div class='header-2'>
+      <h1>Rat Sighting Results</h1>
+    </div>
+    <div class='new-search'>
+      <a href="../">Home</a>
+      <a href="../rats">Search Again</a>
+    </div>
+  </div>
+  <div class='results' id='results1'>
+    <% results.forEach( (value) => { %>
+    <div class='shadowbox' id='rat-info'>
+    <h3><span>Address</span>: <%= value.incident_address %>, <%= value.borough %></h3>
+    <% if (value.cross_street_1)  { %>
+      <p>Crossstreets: <%= value.cross_street_1 %> and <%= value.cross_street_2 %> </p>
+    <% } %>
+    </div>
+    <% } ) %>
+  </div>
+  <% if (results.length === 0) { %>
+    <h1>Sorry, there are no matches to your search.</h1>
+  <% } %>
+</body>
+</html>

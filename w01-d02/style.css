@@ -1,0 +1,59 @@
+body {
+  font-family: arial;
+  background-color: #FEFCFF;
+}
+
+header {
+  display: block;
+  text-align: center;
+}
+
+.menu {
+  margin: 40px 0 0 0;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0 0 40px 0;
+  font-family: 'Oswald', sans-serif;
+  font-color: #2B3856;
+}
+
+img {
+  height: 200px;
+}
+
+ul {
+  padding: 5px;
+  margin: 5px 0 0 0;
+}
+
+li {
+  display: inline;
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#zonkey {
+  margin: 0 0 0 10px;
+  display: block;
+  border-bottom: 2px solid black;
+  min-height: 210px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-color: #2B3856;
+}

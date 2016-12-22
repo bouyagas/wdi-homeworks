@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Favorites</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <h1>Favs</h1>
+   <h3><%= favorites.length %> Favorites</h3>
+   <% favorites.forEach ( bird => { %>
+      <li class="fav-item">
+        <h4><%= bird.ops.name %></h4>
+      </li>
+    <% }) %>
+</body>
+</html>

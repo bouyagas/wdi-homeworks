@@ -1,0 +1,27 @@
+{
+  "name": "hw-w08-d01",
+  "version": "1.0.0",
+  "description": "![One more time because it's my favorite png](jason-seminara-sells.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:krmalewski/hw-w08-d01.git"
+  },
+  "author": "Krystyna Malewski",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "html": "^1.0.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "node-fetch": "^1.6.3",
+    "path": "^0.12.7",
+    "pg-promise": "^5.3.5"
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angry Birds</title>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="bg">
+    <img src="/images/background.png" alt="">
+  </div>
+  <header>
+    <h1>Angry Birds</h1>
+    <a href="/">Home</a>
+    <a href="/angry-birds/:id">Search for Birds</a>
+    <% const speciesArray = []; %>
+    <% birds.forEach( bird => { %>
+      <% if (!speciesArray.includes(bird.species)) { %>
+        <% speciesArray.push(bird.species) %>
+      <% } %>
+    <% }) %>
+
+    <% const groupArray = []; %>
+    <% birds.forEach( bird => { %>
+      <% if (!groupArray.includes(bird.group)) { %>
+        <% groupArray.push(bird.group) %>
+      <% } %>
+    <% }) %>
+
+    <% const feelsArray = []; %>
+    <% birds.forEach( bird => { %>
+      <% if (!feelsArray.includes(bird.feels)) { %>
+        <% feelsArray.push(bird.feels) %>
+      <% } %>
+    <% }) %>
+
+    <form action="/angry-birds/:id" method="GET">
+      <select name="species">
+      <option disabled selected value>Selected Species</option>
+        <% speciesArray.forEach( species => { %>
+          <option value="<%= species %>"><%= species %></option>
+      <% }) %>
+      </select>
+
+      <select name="group">
+      <option disabled selected value>Selected Group</option>
+        <% groupArray.forEach( group => { %>
+          <option value="<%= group %>"><%= group %></option>
+      <% }) %>
+      </select>
+
+      <select name="feels">
+      <option disabled selected value>Selected "Feels"</option>
+        <% feelsArray.forEach( feel => { %>
+          <option value="<%= feel %>"><%= feel %></option>
+      <% }) %>
+      </select>
+
+      <input type="submit" value="Find birds">
+    </form>
+  </header>
+
+  <div class="container">
+    <% for ( let i = 0; i < birds.length; i++ ) { %>
+      <div class="all-birds">
+        <h2><%= birds[i].name %></h2>
+        <p><span>Abilities:</span><%= birds[i].abilities %></p>
+        <p><span>Group:</span><%= birds[i].group %></p>
+        <div id="picture">
+          <img src="<%= birds[i].image %>" alt="<%= birds[i].name %>">
+        </div>
+        <form class="save-favorite" action="/angry-birds/:id" method="get">
+          <input type="hidden" name="id" value="<%= birds[i].id %>">
+          <input type="submit" value="Look at me!">
+         </form>
+         <form action="/favorite" method="post">
+           <input type="hidden" name="name" value="<%= birds[i].name %>">
+           <input type="hidden" name='abilities' value="<%= birds[i].abilities %>">
+           <input type="hidden" name="group" value="<%= birds[i].group %>">
+           <input type="hidden" name='image' value="<%= birds[i].image %>">
+           <input type="submit" value="Save to favorites!">
+         </form>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

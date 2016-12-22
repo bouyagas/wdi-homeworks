@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rats to Restaurants</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+  <div class='bg graybg'></div>
+  <div class='header-bar'>
+    <div class='header-1'></div>
+    <div class='header-2'>
+      <h1>Restaurant Health Code Violations</h1>
+    </div>
+    <div class='new-search'>
+      <a href="../">Home</a>
+      <a href="../restaurants">Search Again</a>
+    </div>
+  </div>
+  <div class='results' id='results1'>
+    <% results.forEach( (value) => { %>
+      <div class='shadowbox' id='results2'>
+        <h3> <%= value.dba %></h3>
+        <div class='info-container'>
+          <div class='info'>
+            <h5><span>Restuarant Location</span>: <%= value.street %></h5>
+            <h5><span>Cuisein Type</span>: <%= value.cuisine_description %></h5>
+            <p>Violation Description: <%= value.violation_description %></p>
+            <% if (value.grade) { %>
+              <p>Restaurant Grade: <%= value.grade %></p>
+            <% } %>
+          </div>
+          <div class='photo'>
+            <% if (value.dba === "AUNTIE ANNE'S PRETZELS") { %>
+              <img src="/images/auntie.png" alt="Auntie Anne's Logo">
+            <% } else if (value.dba === "FOLEY'S N.Y. PUB AND RESTAURANT") { %>
+              <img src="/images/foley.00_png_srz" alt="Auntie Anne's Logo">
+            <% } else if (value.cuisine_description === "Pizza" ) { %>
+              <img src="/images/pizza.jpg" alt="pizza">
+            <% } else if (value.cuisine_description === "Chinese" ) { %>
+              <img src="/images/fuji.png" alt="Fuji Bakery">
+            <% } else if (value.dba === "BLARNEY ROCK" ) { %>
+              <img src="/images/irish.jpg" alt="Blarney Rock">
+             <% } else if (value.dba === "TWINS PUB" ) { %>
+              <img src="/images/twins.jpg" alt="Twins Pub">
+            <% } else if (value.dba === "MOLLY WEE PUB" ) { %>
+              <img src="/images/molly.jpg" alt="The Molly Wee Pub">
+            <% } else if (value.cuisine_description === "Italian" ) { %>
+              <img src="/images/pasta.jpeg" alt="Pasta">
+            <% } else if (value.dba === "TRATTORIA BIANCA" ) { %>
+              <img src="/images/bianca.jpg" alt="Trattoria Bianca">
+            <% } else if (value.dba === "TICK TOCK DINER" ) { %>
+              <img src="/images/tictock.jpg" alt="Tick Tock Diner">
+            <% } else if (value.dba === "SPEEDY DELI" ) { %>
+              <img src="/images/deli.jpg" alt="Speedy Deli">
+            <% } else if (value.dba === "MUSTANG HARRY'S" ) { %>
+              <img src="/images/mustang.png" alt="Mustang Harry's">
+            <% } else if (value.dba === "SKYLIGHT DINER" ) { %>
+              <img src="/images/skylight.jpg" alt="Skylight Diner">
+            <% } else if (value.dba === "RICK'S CABARET" ) { %>
+              <img src="/images/ricks.jpg" alt="Rick's Cabaret">
+            <% } else if (value.dba === "THE GREEK CORNER" ) { %>
+              <img src="/images/greek.jpeg" alt="The Greek Corner">
+             <% } else if (value.cuisine_description === "Korean" ) { %>
+              <img src="/images/korean.jpg" alt="Korean Cuisine">
+            <% } else { %>
+              <img src="/images/diner.jpg" alt="food">
+            <% } %>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  <% if (results.length === 0) { %>
+    <h1>Sorry, there are no matches to your search.</h1>
+  <% } %>
+</body>
+</html>

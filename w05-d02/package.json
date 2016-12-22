@@ -1,0 +1,20 @@
+{
+  "name": "hw-w05-d02",
+  "version": "1.0.0",
+  "description": "![XFiles](https://media.giphy.com/media/l41lFptE01rEpCFQA/giphy.gif)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:krmalewski/hw-w05-d02.git"
+  },
+  "author": "Krystyna Malewski",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  }
+}
